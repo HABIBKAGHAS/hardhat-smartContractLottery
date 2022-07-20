@@ -29,4 +29,15 @@ module.exports = {
             default: 1,
         },
     },
+    mocha: {
+        timeout: 500000,
+    },
+    gasReporter: {
+        enabled: false,
+        outputFile: "gas-reporter.log",
+        noColors: true,
+        currency: "USD",
+        coimarketcap: COIN_MARKET_CAP_API_KEY,
+        token: "MATIC",
+    },
 };

@@ -82,7 +82,7 @@ contract Raffle is VRFConsumerBaseV2, KeeperCompatibleInterface {
         bool hasBalance = address(this).balance > 0;
         upkeepNeeded = (isOpen && timePassed && hasPlayers && hasBalance);
 
-        if (upkeepNeeded) {}
+        return (upkeepNeeded, "0x0");
     }
 
     function performUpkeep(
@@ -157,5 +157,9 @@ contract Raffle is VRFConsumerBaseV2, KeeperCompatibleInterface {
 
     function getRequestConfirmations() public pure returns (uint16) {
         return REQUEST_CONFIRMATIONS;
+    }
+
+    function getInterval() public view returns (uint256) {
+        return i_interval;
     }
 }

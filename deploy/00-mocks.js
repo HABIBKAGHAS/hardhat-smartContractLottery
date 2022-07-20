@@ -20,4 +20,4 @@ module.exports.default = async function ({ getNamedAccounts, deployments }) {
     }
 };
 
-module.exports.tags = ["all", "fundme"];
+module.exports.tags = ["all", "mocks"];
